@@ -30,3 +30,6 @@ data/processed/*
 # Keep folder structure in Git
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+
+# Trained model artifacts
+artifacts/models/*.joblib
