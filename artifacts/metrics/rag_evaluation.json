@@ -1,0 +1,28 @@
+{
+    "n_examples": 3,
+    "correct": 3,
+    "top1_retrieval_accuracy": 1.0,
+    "results": [
+        {
+            "question": "What should happen when a predictive model detects elevated risk?",
+            "expected_source": "incident_response.md",
+            "top_source": "incident_response.md",
+            "top_score": 0.3914,
+            "correct": true
+        },
+        {
+            "question": "What should be investigated when quality performance decreases?",
+            "expected_source": "quality_policy.md",
+            "top_source": "quality_policy.md",
+            "top_score": 0.6216,
+            "correct": true
+        },
+        {
+            "question": "What should operators review when abnormal conditions occur?",
+            "expected_source": "operations_guidelines.md",
+            "top_source": "operations_guidelines.md",
+            "top_score": 0.4679,
+            "correct": true
+        }
+    ]
+}

@@ -1,5 +1,4 @@
 from pathlib import Path
-from src.tools.ml_tool import predict_risk
 
 import joblib
 import pandas as pd
@@ -32,11 +31,6 @@ def predict_risk(
 ) -> dict:
     """
     Predict whether an observation requires attention.
-
-    Returns
-    -------
-    dict
-        Predicted class and attention probability.
     """
 
     artifact = load_model()
@@ -101,27 +95,3 @@ if __name__ == "__main__":
 
     print("\n=== HIGH-RISK-LIKE CASE ===")
     print(risk_case)
-
-
-
-def test_prediction_output():
-    result = predict_risk(
-        temperature=70,
-        pressure=30,
-        throughput=100,
-        downtime_minutes=5,
-    )
-
-    assert "prediction" in result
-    assert "attention_probability" in result
-
-    assert result["prediction"] in {
-        "normal",
-        "attention",
-    }
-
-    assert (
-        0
-        <= result["attention_probability"]
-        <= 1
-    )

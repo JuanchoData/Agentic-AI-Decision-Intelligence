@@ -1,0 +1,61 @@
+{
+    "n_examples": 9,
+    "correct": 9,
+    "routing_accuracy": 1.0,
+    "results": [
+        {
+            "query": "Compare normal and attention observations.",
+            "expected": "analytics",
+            "predicted": "analytics",
+            "correct": true
+        },
+        {
+            "query": "Show me a summary of the operational data.",
+            "expected": "analytics",
+            "predicted": "analytics",
+            "correct": true
+        },
+        {
+            "query": "What variables are correlated with quality?",
+            "expected": "analytics",
+            "predicted": "analytics",
+            "correct": true
+        },
+        {
+            "query": "Show the lowest quality observations.",
+            "expected": "analytics",
+            "predicted": "analytics",
+            "correct": true
+        },
+        {
+            "query": "What does the documentation recommend when quality decreases?",
+            "expected": "rag",
+            "predicted": "rag",
+            "correct": true
+        },
+        {
+            "query": "What does the quality policy say?",
+            "expected": "rag",
+            "predicted": "rag",
+            "correct": true
+        },
+        {
+            "query": "What procedure should be followed for an anomaly?",
+            "expected": "rag",
+            "predicted": "rag",
+            "correct": true
+        },
+        {
+            "query": "Predict risk for temperature=90, pressure=42, throughput=80, downtime=30.",
+            "expected": "ml",
+            "predicted": "ml",
+            "correct": true
+        },
+        {
+            "query": "What is the probability of risk for temperature=70 pressure=30 throughput=100 downtime=5?",
+            "expected": "ml",
+            "predicted": "ml",
+            "correct": true
+        }
+    ]
+}
