@@ -1,13 +1,15 @@
 import json
+import os
 
 import pandas as pd
 import requests
 import streamlit as st
 
 
-API_URL = "http://127.0.0.1:8000/query"
-
-
+API_URL = os.getenv(
+    "API_URL",
+    "http://127.0.0.1:8000/query",
+)
 # ============================================================
 # PAGE CONFIGURATION
 # ============================================================

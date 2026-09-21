@@ -1,0 +1,28 @@
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: agentic-ai-decision-intelligence
+    container_name: decision-intelligence-api
+    ports:
+      - "8000:8000"
+
+  dashboard:
+    image: agentic-ai-decision-intelligence
+    container_name: decision-intelligence-dashboard
+    depends_on:
+      - api
+    environment:
+      API_URL: http://api:8000/query
+    command:
+      - python
+      - -m
+      - streamlit
+      - run
+      - app/streamlit_app.py
+      - --server.address=0.0.0.0
+      - --server.port=8501
+    ports:
+      - "8501:8501"
